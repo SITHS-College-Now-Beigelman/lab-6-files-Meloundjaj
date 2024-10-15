@@ -1,0 +1,52 @@
+// MELOUNDJA jOSEPH
+// 10/15/2024
+// Program for practice of streams 
+
+#include <iostream> 
+#include <fstream>// access to files 
+#include <iomanip>
+#include <string>
+using namespace std;
+ 
+int main ( ) 
+{
+    ifstream inFile; //input file stream variable
+    ofstream outFile; //output file stream variable
+    inFile.open("inData.txt"); // Step 3: Open the files
+    outFile.open("outData.txt");
+
+    int intA;// declaring my first interger
+    int intB;// declaring my second 
+    char chary; // declaring my char
+    string stringy; // declaring my string 
+
+    inFile >> intA >> intB; //reads the two intergers, being pulled from the in data file
+    outFile << (intA + intB) << endl; // adds the two ints
+
+    inFile >> chary;// grabs my char
+    outFile <<"char: " << char(chary + 1) << endl;// outputs my char plus one
+
+    inFile >> stringy;// gets my string
+    outFile << stringy << endl;// outputs my string 
+
+   
+
+  
+
+
+
+  
+
+
+   
+    inFile.close(); // Last step to close the file
+    outFile.close();
+
+    
+ 
+     return 0; 
+}
+
+
+
+
